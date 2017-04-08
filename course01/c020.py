@@ -29,3 +29,15 @@ print(L)
 print("*******************")
 L = [d for d in os.listdir('.')]  # os.listdir可以列出文件和目录
 print(L)
+
+# 列表生成式也可以使用两个变量来生成list：
+print("*******************")
+d = {'x': 'A', 'y': 'B', 'z': 'C'}
+l = [k + '=' + v for k, v in d.items()]
+print(l)
+
+# 把一个list中所有的字符串变成小写
+print("*******************")
+L = ['Hello', 'World', 'IBM', 'Apple']
+L = [s.lower() for s in L]
+print(L)
