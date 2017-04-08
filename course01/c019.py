@@ -25,4 +25,18 @@ for e in s:
     print(e)
 # 如何判断一个对象是可迭代对象呢？方法是通过collections模块的Iterable类型判断
 print("*******************")
-print(isinstance('abc', Iterable))
+print(isinstance('123', Iterable))
+print("*******************")
+print(isinstance(123, Iterable))
+print("*******************")
+print(isinstance([1, 2, 3], Iterable))
+
+# 如果要对list实现类似Java那样的下标循环怎么办？Python内置的enumerate函数可以把一个list变成索引-元素对
+print("*******************")
+L = ['A', 'B', 'C']
+for i, v in enumerate(L):
+    print(i, "->", v)
+# for循环里，同时引用了两个变量，在Python里是很常见的
+print("*******************")
+for x, y in [(1, 1), (2, 4), (3, 9)]:
+    print(x, ",", y)
